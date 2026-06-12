@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Sustentabilidade - Agro 2026</title>
+  <title>Agro 2026 - Sustentabilidade</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,69 +12,63 @@
   <h1>🌱 Sustentabilidade no Agro 2026</h1>
 
   <nav>
-    <a href="#inicio">Início</a>
-    <a href="#dicas">Dicas</a>
-    <a href="#agro">Novidades no Agro</a>
+    <button onclick="mostrarSecao('inicio')">Início</button>
+    <button onclick="mostrarSecao('dicas')">Dicas</button>
+    <button onclick="mostrarSecao('agro')">Novidades no Agro</button>
   </nav>
 </header>
 
 <!-- INÍCIO -->
-<section id="inicio">
-  <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt="Natureza" class="banner">
+<section id="inicio" class="secao">
+  <img class="banner" src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6">
 
   <h2>O que é sustentabilidade?</h2>
   <p>
-    Sustentabilidade é usar os recursos naturais de forma responsável, sem destruir o meio ambiente,
-    garantindo que as próximas gerações também possam viver bem.
+    Sustentabilidade é usar os recursos naturais de forma responsável, sem prejudicar o meio ambiente e garantindo o futuro das próximas gerações.
   </p>
 
-  <h2>Por que ela é importante?</h2>
+  <h2>Por que é importante?</h2>
   <p>
-    Ela ajuda a preservar a natureza, reduz a poluição e melhora a qualidade de vida.
-    No agronegócio, significa produzir mais sem destruir o solo e a água.
+    Ela reduz poluição, preserva a natureza e melhora a qualidade de vida, principalmente no agronegócio moderno.
   </p>
 </section>
 
-<hr>
-
 <!-- DICAS -->
-<section id="dicas">
-  <h2>💡 Dicas de Sustentabilidade</h2>
+<section id="dicas" class="secao" style="display:none;">
+  <img class="banner" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
 
-  <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Reciclagem" class="banner">
+  <h2>💡 Dicas Sustentáveis</h2>
 
   <ul>
-    <li>♻️ Recicle o lixo corretamente</li>
-    <li>💧 Economize água no dia a dia</li>
+    <li>♻️ Recicle corretamente</li>
+    <li>💧 Economize água</li>
     <li>🌳 Plante árvores</li>
-    <li>⚡ Economize energia elétrica</li>
-    <li>🚯 Evite desperdício de alimentos</li>
+    <li>⚡ Economize energia</li>
+    <li>🚯 Evite desperdícios</li>
   </ul>
 </section>
 
-<hr>
-
 <!-- AGRO -->
-<section id="agro">
-  <h2>🚜 Novidades no Agronegócio</h2>
+<section id="agro" class="secao" style="display:none;">
+  <img class="banner" src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9">
 
-  <img src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9" alt="Agro tecnologia" class="banner">
+  <h2>🚜 Novidades no Agro</h2>
 
   <h3>Tecnologia no campo</h3>
   <p>
-    O agronegócio hoje usa drones, sensores e inteligência artificial para aumentar a produção
-    e reduzir impactos ambientais.
+    Drones, sensores e inteligência artificial estão transformando a produção agrícola.
   </p>
 
   <h3>Agricultura sustentável</h3>
   <p>
-    O foco é produzir alimentos preservando o solo, a água e reduzindo o uso de produtos químicos.
+    Produção com menos impacto ambiental e mais eficiência.
   </p>
 </section>
 
 <footer>
-  <p>🌍 Projeto Agro 2026 - Sustentabilidade</p>
+  <p>🌍 Projeto Agro 2026</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
