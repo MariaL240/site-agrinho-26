@@ -115,3 +115,8 @@ footer {
     transform: translateY(0);
   }
 }
+header h1 {
+  font-size: 32px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
