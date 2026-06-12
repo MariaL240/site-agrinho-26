@@ -1,182 +1,105 @@
-/* --- ESTILOS VISUAIS DO JORNAL --- */
-:root {
-    --verde-escuro: #1b4332;
-    --verde-principal: #2d6a4f;
-    --verde-claro: #d8f3dc;
-    --tom-terra: #74c69d;
-    --cinza-claro: #f8f9fa;
-    --texto: #212529;
-}
-
+/* RESET BÁSICO */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+/* FUNDO GERAL */
 body {
-    background-color: var(--cinza-claro);
-    color: var(--texto);
-    line-height: 1.6;
+  background: #f4f7f5;
+  color: #1f2d1f;
+  line-height: 1.6;
 }
 
-/* Cabeçalho */
+/* CABEÇALHO */
 header {
-    background-color: var(--verde-escuro);
-    color: white;
-    text-align: center;
-    padding: 2rem 1rem;
-    border-bottom: 5px solid var(--tom-terra);
+  background: linear-gradient(90deg, #1b5e20, #43a047);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 0.5rem;
-}
-
-header p {
-    font-style: italic;
-    color: var(--verde-claro);
-}
-
-/* Menu de Abas */
+/* MENU */
 nav {
-    display: flex;
-    justify-content: center;
-    background-color: var(--verde-principal);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  margin-top: 10px;
 }
 
-nav button {
-    background: none;
-    border: none;
-    color: white;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s;
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-nav button:hover, nav button.ativo {
-    background-color: var(--verde-escuro);
-    border-bottom: 3px solid white;
+nav a:hover {
+  color: #c8e6c9;
+  transform: scale(1.1);
 }
 
-/* Estrutura Central */
-main {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+/* SEÇÕES */
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
 }
 
-/* Sistema de Exibição das Páginas */
-.pagina {
-    display: none;
-    animation: fadeIn 0.5s ease-in-out;
+/* IMAGENS */
+.banner {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-.pagina.ativa {
-    display: block;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Blocos de Notícias */
+/* TÍTULOS */
 h2 {
-    color: var(--verde-escuro);
-    border-bottom: 2px solid var(--verde-principal);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.5rem;
-    font-size: 1.8rem;
+  color: #2e7d32;
+  margin-bottom: 10px;
 }
 
-.grid-noticias {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+h3 {
+  color: #388e3c;
+  margin-top: 15px;
 }
 
-.cartao-noticia {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    border-left: 5px solid var(--verde-principal);
+/* LISTA */
+ul {
+  list-style: none;
+  padding-left: 0;
 }
 
-.cartao-noticia h3 {
-    color: var(--verde-principal);
-    margin-bottom: 0.8rem;
+ul li {
+  background: white;
+  margin: 10px 0;
+  padding: 12px;
+  border-left: 6px solid #43a047;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Elementos Interativos */
-.caixa-interativa {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    text-align: center;
+/* LINHA SEPARADORA */
+hr {
+  border: none;
+  height: 1px;
+  background: #c8e6c9;
+  margin: 40px auto;
+  max-width: 900px;
 }
 
-select, button.btn-acao {
-    padding: 0.8rem 1rem;
-    font-size: 1rem;
-    margin: 1rem 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 100%;
-    max-width: 300px;
-}
-
-button.btn-acao {
-    background-color: var(--verde-principal);
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    transition: background 0.2s;
-}
-
-button.btn-acao:hover {
-    background-color: var(--verde-escuro);
-}
-
-#resultado-dica {
-    margin-top: 1.5rem;
-    padding: 1rem;
-    background-color: var(--verde-claro);
-    border-radius: 5px;
-    font-weight: 500;
-    display: none;
-}
-
-/* Rodapé */
+/* RODAPÉ */
 footer {
-    background-color: var(--verde-escuro);
-    color: white;
-    text-align: center;
-    padding: 1.5rem;
-    margin-top: 4rem;
-    font-size: 0.9rem;
-}
-
-/* Responsivo para celular */
-@media (max-width: 600px) {
-    nav {
-        flex-direction: column;
-    }
-    nav button {
-        padding: 0.8rem;
-        text-align: center;
-    }
+  text-align: center;
+  background: #1b5e20;
+  color: white;
+  padding: 20px;
+  margin-top: 40px;
 }
