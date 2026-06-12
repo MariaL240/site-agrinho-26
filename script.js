@@ -6,5 +6,10 @@ function mostrarSecao(id) {
     secao.style.display = "none";
   });
 
-  document.getElementById(id).style.display = "block";
+  const ativa = document.getElementById(id);
+
+  if (ativa) {
+    ativa.style.display = "block";
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
 }
